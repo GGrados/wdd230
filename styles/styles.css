@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Slab:wght@300&display=swap');
+
+
+* {
+    box-sizing: border-box;  
+    margin: 0 auto;    
+}
+
+h1, h2{
+    font-family: 'Oswald', "Georgia", serif;
+}
+
+body {
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+header {
+    background-color: rgba(5, 68, 0, 0.5);
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
+main {
+    font-family: "Roboto slab", "Georgia", serif;
+    font-weight: bold;
+}
+main h2 {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    background-color: rgba(5, 68, 0, 0.5);
+    
+    
+}
+
+footer p {
+    text-align: center;
+    font-family: "Roboto slab", "Georgia", serif;
+    font-weight: bold;
+}
