@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/*Nav Bar*/ 
+nav {
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin: 50px auto;
+    width: 50%;
+    justify-content: space-around;
+    text-align: center;
+    
+}
+
+nav div {
+    padding: 15px;
+    
+}
+
+nav div a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2 rem;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;;
+    
+}
+
+nav div:hover {
+    background-color: gold;
+    
+    
+}
+
+
+
+
+/*Home Page*/
+
+.home-page div {
+    border-bottom: solid 3px black;
+    padding-bottom: 25px;
+    
+}
+
+.home-page .logo-box img {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+h1 {
+    font-family: 'IBM Plex Sans Condensed'
+}
+p{
+    font-family: 'Noto Serif', serif;
+}
+
+h2 {
+    font-family: 'Rubik', sans-serif;
+    padding-top: 20px;
+
+}
+
+.home-page div, h2, h4, h3 {
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+
+
+/*Design Page*/
+
+.colors {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.primary, .secondary, .accent1, .accent2 {
+    width: 25%;
+    height: 3em;
+    font-weight: bolder;
+    color: floralwhite;
+}
+.primary {
+    background-color: #b8336a;
+}
+
+.secondary {
+    background-color: #364F59;
+}
+
+.accent1 {
+    background-color:  #000500;
+}
+
+.accent2 {
+    background-color:  #F5F5F5;
+    color: black;}
+
+
+.identifier {
+    background-color: rgb(185, 178, 178);
+    font-weight: bolder;
+}
+
+.color-palette {
+    border-bottom: solid 3px black;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+
+.typography, h3, p {
+    text-align: center;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.typography .header{
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.typography  .paragraph, .p-example, p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Target Audience page*/
+
+
+.target, .personas {
+    border-bottom: solid 3px black;
+    margin-bottom: 10px;
+    padding-bottom: 25px;
+    
+}
+
+span {
+    background-color: gold;
+}
+
+.scenarios {
+    margin-bottom: 60px;
+}
+
+@media (min-width: 37.5em) {
+    /*Home Page*/
+	nav {
+		flex-direction: row;
+	}
+	
+	nav a {
+		font-size: 1.5em;
+        
+	}
+
+    .home-page {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+
+    
+    .home-page div {
+        border-right: 3px solid black;
+        border-bottom: none;
+        
+    }
+
+    .home-page div h2{
+        padding-bottom: 15px;
+    }
+    .home-page div h2,p {
+        font-size: 1.5em;
+    }
+
+    /*Design Page*/
+
+    .design-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .color-palette {
+        border-bottom: none;
+        border-right: solid 3px black;
+    }
+
+    .primary, .secondary, .accent1, .accent2 {
+        font-size: 1.5em;
+    }
+
+    .typography .header {
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
+        font-size: 2em;
+    }
+    
+
+   
+    .identifier {
+        font-size: 1.5em;
+    }
+
+
+    /* Target Audience*/
+
+    .target-audience {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .scenarios {
+        grid-column: 1/3;
+    }
+
+    .target {
+        border-right: solid 3px black;
+    }
+
+    
+}
