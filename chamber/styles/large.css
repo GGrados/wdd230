@@ -1,38 +1,33 @@
 
 @media only screen and (min-width: 64rem) {
 
-
+    /*HEADER*/
+    .logo-icons-navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
     .logo {
         width: 10%;
     }
     nav button {
         display: none;
     }
-
     nav ul {
         display: flex;
     }
-
     nav ul li a {
         border: none;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
-
     .icons-container {
         display: flex;
+        gap: 5px;
         order: 3;
     }
 
-
     .datetime {
-        order: 4;
         width: 90%;
-    }
-    header {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        
     }
 
     nav ul li a {
@@ -40,14 +35,31 @@
     }
 
 
-    /*MAIN */
+    /*MAIN CONTENT*/
+    .hero img {
+        height: 620px;
+        font-size: 2.3rem;
+    }
+
+    .welcome {
+        left: 25px;
+        font-size: 2.3rem;
+    }
+
+    .join-button {
+        bottom: 100px;
+        right: 60px;
+        font-size: 1.3rem;
+    }
 
     main {
         grid-template-columns: 1fr 3fr 1fr;
         grid-auto-rows: minmax(180px, auto);
     }    
-    
 
+    .spotlights {
+        flex-direction: column;
+    }
     .spotlights section:nth-child(3) {
         display: unset;
         flex: 50%;
@@ -60,6 +72,16 @@
     .event {
         grid-column: 1/2;
         grid-row: 1/2;
+    }
+
+
+
+    .event h2 {
+        font-size: 1.3rem;
+    }
+
+    .event p {
+        font-size: 16px;
     }
 
     .hero {
@@ -89,8 +111,16 @@
     }
 
 
-    footer {
-        font-size: 1rem;
-        font-weight: bold;
-       }
+    /*footer*/
+
+    .top-footer {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .top-footer .logo {
+        margin: 0;
+    }
+
 }

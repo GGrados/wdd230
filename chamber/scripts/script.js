@@ -1,19 +1,19 @@
-
+// Toggle Menu
 function toggleMenu() {
 
     document.getElementById('primaryNav').classList.toggle('open');
     document.getElementById('hamburgerbutton').classList.toggle('open');
 }
 
+
+//Toggle Menu
 const x = document.getElementById('hamburgerbutton');
-
-x.onclick = toggleMenu;
-
+x.onclick = toggleMenu
 
 
-const date = new Date();
 
 // Displaying current year after the copyright symbol
+const date = new Date();
 
 let year = date.getFullYear();
 document.querySelector(".year").textContent = year;
@@ -36,6 +36,12 @@ let month = date.getMonth();
 let monthString = months[month]
 let dayDate = date.getDate()
 
-let formattedDate = weekDay + ', ' + monthString + ' ' + dayDate + ' ' + year
+let formattedDate = weekDay + ', ' + dayDate + ' ' + monthString + ' ' + year
 document.querySelector(".datetime").textContent = formattedDate;
 
+
+
+//banner
+if (dayNumber == 1 || dayNumber == 2) {
+    document.querySelector(".banner").classList.toggle("showBanner");
+}

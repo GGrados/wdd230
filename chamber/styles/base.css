@@ -10,56 +10,77 @@ body {
     margin: auto;
 }
 
-h3, p {
+p {
     font-family: 'Montserrat', sans-serif;
 }
 
-h1 { 
-     font-family: 'IBM Plex Sans Condensed', sans-serif}
+h1, h2, h3 { 
+    font-family: 'Open Sans', sans-serif;
+    text-align: center; 
+}
 
 
 /*HEADER*/
 header {
     background-color: #b8336a;
     margin-top: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    flex-wrap: wrap;
+    padding: 10px;
+    box-shadow: 2px 2px 7px 2px rgba(90, 55, 74, 0.8);
 }
 
-.logo {
-    width: 30%;
-    height: 30%;
-    border-radius: 23%;
+
+
+.logo-icons-navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     
 }
+.logo {
+    width: 25%;
+    height: 25%;
+    border-radius: 23%;
+}
 
-
-
+.icons-container {
+    grid-row: 1;
+}
 .icons-container a img {
     width: 30px;
     border-radius: 23%;
     margin-top: 10px;
 }
 
-
 .datetime {
-    margin-top: 10px;
+    margin: 10px auto;
     height: 20px;
     width: 100%;
-    background-color: lightgray;
+    background-color: #F5F5F5;
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-row: 2;
     
 }
 
+/* BANNER ON MONDAYS  AND TUESDAYS*/
+.banner {
+    text-align: center;
+    font-family:'Open Sans', sans-serif; 
+    font-weight: bolder;
+    padding: 15px;
+    background-color: yellow;
+    display: none;
+}
 
+.banner.showBanner {
+    display: block;
+    background-color: yellow;
+}
 
 
 /* HEADER > Hamburguer botton in small views*/
+
 nav button {
     background-color: transparent;
     border: none;
@@ -67,6 +88,7 @@ nav button {
 }
 nav ul {
     list-style-type: none;
+    
 }
 nav ul li a {
     display: block;
@@ -108,7 +130,7 @@ nav ul.open {display: block;}
 }
 
 
-/* CONTENT */
+/* MAIN CONTENT */
 
 main { 
     display: grid;
@@ -118,28 +140,113 @@ main {
 }
 
 section {
-    border: 1px solid black;
+    
+    padding: 15px;
+    background-color: #364F59;
+    box-shadow: 2px 2px 7px 2px rgba(0,0,0,.8);
+}
+
+
+/*HERO IMG*/
+.hero {
+    padding: 0;
+    border: 0px;
+    position: relative;
+}
+.hero img {
+    background-color: #364F59;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.welcome {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-weight: 800;
+
+}
+
+.join-button {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    padding: 10px;
+    border-radius: 25%;
+    border: none;
+    background-color: #b8336a;
+    cursor: pointer;    
+}
+
+.join-button a {
+    color: #F5F5F5;
+    font-family: 'Montserrat', sans-serif ;
+
+}
+
+
+
+/*SECTIONS*/
+
+.event, .new-release {
     padding: 10px;
 }
+
+.section-title {
+    background-color: rgba(255, 232, 203, 1.6); 
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+    border-radius: 12px;
+    opacity: 95%;
+}
+
+.sections-p{
+    padding: 15px;
+    text-align: center;
+    color: #F5F5F5;
+}
+
+.event img {
+    display: block;
+    margin: 0 auto;
+}
+
+.event a {
+    display: block;
+    text-align: center;
+    color: #F5F5F5;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+ 
+
 .spotlights {
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 5px;
 }
 
 .spotlights section:nth-child(1) {
     flex: 50%;
-
+    box-shadow: none;
+    border: 1px solid #F5F5F5;
 }
 
 .spotlights section:nth-child(2) {
-    margin-top: 10px;
     flex: 50%;
+    box-shadow: none;
+    border: 1px solid #F5F5F5;
 }
 
 .spotlights section:nth-child(3) {
     display: none;
+    box-shadow: none;
+    border: 1px solid #F5F5F5;
 }
 
 .join {
@@ -147,24 +254,24 @@ section {
     display: none;
 }
 
-
-
 /* FOOTER*/
 
 
-footer {
+.top-footer {
     background-color: #b8336a;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
-    margin-bottom: 16px;
+    
+    box-shadow: 2px 2px 7px 2px rgba(90, 55, 74, 0.8);
+
 }
 
+
 footer .logo {
-    text-align: center;
+    margin: 0 auto;
     margin-bottom: 20px;
-    font-size: 0.8rem;
 }
 
 .contact-info1 {
@@ -174,16 +281,16 @@ footer .logo {
 
 }
 
-
 .contact-info2 {
     text-align: center;
     font-size: 0.8rem;
-
 }
 
 .bottom-footer {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 232, 203, 1.6);
+    box-shadow: 2px 2px 7px 2px rgba(90, 55, 74, 0.5);
 }
 
 
