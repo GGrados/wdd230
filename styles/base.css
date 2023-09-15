@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+/*HEADER*/
+
+body {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.1rem;
+}
+header {
+    background-color: #EDAE1D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    justify-content: space-evenly;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+header img {border-radius: 10px;}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;    
+    background-color: #333333;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.2rem;
+}
+
+nav a:hover {
+    background-color: #BC8810;
+    color: #FFF8EB;
+    text-decoration: underline;
+}
+
+/*MAIN*/
+main {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    gap: 1rem;
+}
+main h2 {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
+
+.card {
+    border: 2px dashed black;
+    padding-bottom: 0.3rem
+}
+
+.card h3{
+    background-color: #EDAE1D;
+    text-align: center;
+    padding: 0.1rem;
+}
+
+main .card ul li{list-style-type: none;}
+
+main .card ul li a {
+    padding: 10px;
+}
+
+/*FOOTER*/
+footer {
+    background-color: #333333;
+    color: #fff;
+    width: 100%;
+    padding: 2rem;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+#year,#lastModified {
+    color: #EDAE1D;
+}
