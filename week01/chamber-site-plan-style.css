@@ -1,0 +1,120 @@
+/*
+FONTS: 
+font-family: 'Graduate', serif;
+font-family: 'Noticia Text', serif;
+font-family: 'Playfair Display', serif;
+*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #E4112A ;
+    color: #F4FFFD;
+    font-family: 'Graduate', serif;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 3px solid #34090D;
+}
+
+section {
+    margin: 1.5em auto;
+    max-width: 60%;
+    border: 1px solid #5C5C5C;
+    text-align: center;
+}
+
+section p, ul,li {
+    padding: 7px;
+    list-style: none;
+    font-family: 'Noticia Text', serif;
+
+}
+section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    padding: 1px;
+    text-align: center;
+    color: #F4FFFD;
+    background-color: #34090D;
+    border: 1px solid #3B5F1C;
+}
+
+table {
+    border: 1px solid black;
+    font-size: 1rem;
+    padding: 5px;
+    margin: 15px auto;
+    font-family: 'Playfair Display', serif;
+}
+
+table td {
+    color: #F4FFFD;
+    font-size: 1.1rem;
+    text-align: center;
+}
+#red-E4112A {
+    background-color: #E4112A;
+}
+#gray-5C5C5C{
+    background-color: #5C5C5C;
+}
+
+#red {
+    background-color: #E4112A;
+    color:#F4FFFD;
+    padding: 5px;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Graduate', serif;;
+}
+
+.gray {
+    background-color: #5C5C5C;
+    color: #F4FFFD;
+    margin-top: 15px;
+    width: 300px;
+    padding: 5px;
+    margin: 10px auto;
+    text-align: center;
+    font-family: 'Noticia Text', serif;
+}
+
+
+
+.font {
+    font-size: 1.1rem;
+    text-align: center;
+}
+#graduate-font{
+    font-family: 'Graduate', serif;
+}
+#noticia-font {
+    font-family: 'Noticia Text', serif;
+}
+#playfairDisplay-font {
+    font-family: 'Playfair Display', serif;
+}
+
+
+#wireframeLarge{
+    max-width: 100%;
+}
+
+#wireframeMobile {
+    border: 0.5px solid black;
+    display: block;
+    margin: 0 auto;
+}
+
+
+h3 {
+    font-family: 'Playfair Display', serif;
+}
