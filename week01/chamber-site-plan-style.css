@@ -22,6 +22,9 @@ header {
     border-bottom: 3px solid #34090D;
 }
 
+#SiteName {
+    font-size: 1.1rem;
+}
 section {
     margin: 1.5em auto;
     max-width: 60%;
