@@ -56,6 +56,10 @@ main h2 {
     text-decoration: underline;
 }
 
+li {
+    padding-left: 1rem;
+}
+
 .card {
     border: 2px dashed black;
     padding-bottom: 0.3rem
