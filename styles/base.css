@@ -4,12 +4,13 @@
     box-sizing: border-box;    
 }
 
-/*HEADER*/
+
 
 body {
     font-family: 'Dosis', sans-serif;
-    font-size: 1.1rem;
 }
+/*HEADER*/
+
 header {
     background-color: #EDAE1D;
     display: flex;
@@ -23,23 +24,75 @@ header {
 
 header img {border-radius: 10px;}
 
+header button {
+    background-color: #333333;
+    color: #EDAE1D;
+    padding: 0.5rem;
+    border-radius: 25%;
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 255, .2);
+}
+
+header button:hover {
+    box-shadow: none;
+    cursor: pointer;
+}
+
+#darkMode {
+    width: 2.5rem;
+    height: 3rem;
+    cursor: pointer;
+    padding: 2px;
+    border: 1px solid rgba(0, 0, 255, .2);
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 255, .2);
+}
+#darkMode:hover{
+    box-shadow: none;
+    border: none;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+
 nav {
     display: flex;
     flex-direction: column;
     text-align: center;    
     background-color: #333333;
 }
-nav a {
+
+
+nav li { 
+    list-style: none;
+    padding: 0.2rem;
+    display: none;
+}
+
+nav  li a {    
     text-decoration: none;
     color: #fff;
     padding: 0.2rem;
 }
 
-nav a:hover {
+nav li:hover {
     background-color: #BC8810;
     color: #FFF8EB;
     text-decoration: underline;
 }
+
+
+/* when the button is clicked - the open class is toggle (added/removed) and accounted for here */
+.open li {
+	display: block;
+	width: 100%;
+}
+#menu.open::before {
+	content: "✖";
+}
+
+
+
 
 /*MAIN*/
 main {
@@ -64,6 +117,7 @@ li {
     border: 2px dashed black;
     padding-bottom: 0.3rem
 }
+
 
 .card h3{
     background-color: #EDAE1D;
@@ -91,3 +145,21 @@ footer {
 #year,#lastModified {
     color: #EDAE1D;
 }
+
+
+/*Dark Mode Settings*/
+
+.background-Black {
+    background-color: black;
+}
+
+.white-letter {
+    color: #fff;
+}
+.white-border {
+    border:  2px dashed #fff;
+}
+
+
+
+
