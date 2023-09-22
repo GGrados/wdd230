@@ -7,6 +7,10 @@
     justify-content: space-evenly;
   }
 
+  header #menu {
+    display: none;
+  }
+
   main {
     grid-template-columns: 0.8fr auto;
   }

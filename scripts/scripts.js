@@ -13,6 +13,7 @@ const h2 = document.querySelector("main h2");
 const li = document.querySelectorAll("main section ul li");
 const a = document.querySelectorAll("main section ul li a");
 const cards = document.querySelectorAll(".card");
+const placeHolders = document.querySelectorAll(".information p");
 
 const darkMode = document.querySelector("#darkMode");
 darkMode.addEventListener("click", () => {
@@ -29,5 +30,9 @@ darkMode.addEventListener("click", () => {
 
   cards.forEach((card) => {
     card.classList.toggle("white-border");
+  });
+
+  placeHolders.forEach((placeHolder) => {
+    placeHolder.classList.toggle("white-letter");
   });
 });
