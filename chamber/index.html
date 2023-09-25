@@ -5,9 +5,10 @@
     <meta name="description" content="Home Page - Chamber of Commerce Lima">
     <meta name="author" content="Cesar Grados">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta property="og:url"          content="#">
+    <meta property="og:url"          content="https://ggrados.github.io/wdd230/chamber/">
     <meta property="og:title"        content="LIMA CHAMBER OF COMMERCE">
     <meta property="og:description"  content="Lima Chamber of Commerce Home Page for WDD230 Cesar Grados">
+    <meta property="og:type" content="article">
     <meta property="og:image"        content="https://www.peru.travel/peru360/imagenes/preview/vista-panoramica-del-malecon-de-la-marina.jpg">
 
     <link rel="icon" href="images/favicon.ico">
@@ -19,6 +20,7 @@
 <body>
     
     <header>
+        
         <img src="images/logo.png" alt="logo">
         <button id="menu"></button>
         
@@ -32,7 +34,12 @@
         </ol>
     </nav>
     <main>
-        <div id="hero-img-container"> Hero Img</div>
+        <div id="hero-img-container">
+            
+            <img src="images/lima.webp" alt="lima Malecon">
+            <h1 id="title">Lima Chamber Of Commerce</h1>
+            <button id="join-button">JOIN THE CHAMBER</button>
+        </div>
 
         <section id="join">
             <h2>join</h2>
@@ -55,12 +62,13 @@
             <section class="spotlight" id="spotlight3"><h3>spotlight</h3></section>
         </aside>
     </main>
-    <script src="scripts/scripts.js"></script>
+    
     <footer>
         
             <p>&copy;<span id="year"></span>&bull; Cesar Grados - Venezuela</p>
             <p  > last Modification: <span id="lastModified"></span></p>
         
     </footer>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>
