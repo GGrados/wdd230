@@ -26,9 +26,7 @@ function displayList(item) {
 }
 
 function setChapterList() {
-  function setChapterList() {
-    localStorage.setItem("myFavBOMList", JSON.stringify(chaptersArray));
-  }
+  localStorage.setItem("myFavBOMList", JSON.stringify(chaptersArray));
 }
 
 function getChapterList() {
