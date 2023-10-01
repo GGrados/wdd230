@@ -39,24 +39,16 @@ darkMode.addEventListener("click", () => {
 
 // counter
 
-function updateCounter() {
-  let count = localStorage.getItem("pageVisitCount");
-  count = count ? parseInt(count) + 1 : 1;
-  localStorage.setItem("pageVisitCount", count.toString());
-  document.getElementById("counter").textContent = count;
-}
+const visitsDisplay = document.querySelector("#counter");
 
-// Check if localStorage is available
-if (typeof Storage !== "undefined") {
-  // Check if the counter exists in localStorage
-  if (localStorage.getItem("pageVisitCount") === null) {
-    localStorage.setItem("pageVisitCount", "0");
-  }
+let numVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
 
-  // Update the counter and display it
-  updateCounter();
+if (numVisits !== 0) {
+  visitsDisplay.textContent = numVisits;
 } else {
-  // If localStorage is not available, display an error message
-  document.getElementById("counter").textContent =
-    "LocalStorage is not supported.";
+  visitsDisplay.textContent = `This is your first visit. 🥳 Welcome!`;
 }
+
+numVisits++;
+
+localStorage.setItem("numVisits-ls", numVisits);
