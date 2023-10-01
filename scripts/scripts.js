@@ -37,29 +37,26 @@ darkMode.addEventListener("click", () => {
   });
 });
 
-function incrementCounter() {
+// counter
+
+function updateCounter() {
+  let count = localStorage.getItem("pageVisitCount");
+  count = count ? parseInt(count) + 1 : 1;
+  localStorage.setItem("pageVisitCount", count.toString());
+  document.getElementById("counter").textContent = count;
+}
+
+// Check if localStorage is available
+if (typeof Storage !== "undefined") {
   // Check if the counter exists in localStorage
   if (localStorage.getItem("pageVisitCount") === null) {
     localStorage.setItem("pageVisitCount", "0");
   }
 
-  // Get the current count from localStorage
-  let count = parseInt(localStorage.getItem("pageVisitCount"));
-
-  // Increment the count
-  count++;
-
-  // Update the counter display
-  document.getElementById("counter").textContent = count;
-
-  // Store the updated count in localStorage
-  localStorage.setItem("pageVisitCount", count.toString());
+  // Update the counter and display it
+  updateCounter();
+} else {
+  // If localStorage is not available, display an error message
+  document.getElementById("counter").textContent =
+    "LocalStorage is not supported.";
 }
-
-// Initialize the counter when the page loads
-window.onload = function () {
-  if (localStorage.getItem("pageVisitCount") !== null) {
-    let count = parseInt(localStorage.getItem("pageVisitCount"));
-    document.getElementById("counter").textContent = count;
-  }
-};
