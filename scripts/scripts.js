@@ -36,3 +36,30 @@ darkMode.addEventListener("click", () => {
     placeHolder.classList.toggle("white-letter");
   });
 });
+
+function incrementCounter() {
+  // Check if the counter exists in localStorage
+  if (localStorage.getItem("pageVisitCount") === null) {
+    localStorage.setItem("pageVisitCount", "0");
+  }
+
+  // Get the current count from localStorage
+  let count = parseInt(localStorage.getItem("pageVisitCount"));
+
+  // Increment the count
+  count++;
+
+  // Update the counter display
+  document.getElementById("counter").textContent = count;
+
+  // Store the updated count in localStorage
+  localStorage.setItem("pageVisitCount", count.toString());
+}
+
+// Initialize the counter when the page loads
+window.onload = function () {
+  if (localStorage.getItem("pageVisitCount") !== null) {
+    let count = parseInt(localStorage.getItem("pageVisitCount"));
+    document.getElementById("counter").textContent = count;
+  }
+};

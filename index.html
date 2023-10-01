@@ -39,6 +39,14 @@
             <li><a href="#">Form</a></li>
         </ol>
     </nav>
+
+    <div class="hero">
+    <picture>
+        <source media="(max-width: 400px)" srcset="images/roma_small.webp">
+        <img src="images/roma_large.webp" alt="Temple Image" width="1000" height="500">
+        <div id="temple-name">Rome Temple</div>
+    </picture>
+    </div>
     <main>
         <h2>WDD 230: Web Frontend Development</h2>
         <section class="card learning">
@@ -55,18 +63,33 @@
         <section class="card information">
             <h3>Information</h3>
             <p>(WEATHER DATA)</p>
-            <p>(NUMBER OF VISITS)</p>
+            <p>Number of visits: <span id="counter">0</span></p>
         </section>
 
     </main>
+
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.0762140815905!2d-77.0639676721861!3d-12.093295977278745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c97ee58ac205%3A0x62c9ec014042c4cc!2sSan%20Charbel%20Edificaciones%20-%20Edificio%20We%20Live!5e0!3m2!1sen!2spe!4v1695974533438!5m2!1sen!2spe" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
     <footer>
         <p>&copy;<span id="year"></span>&bull; Cesar Grados - Venezuela <img src="images/venezuela.webp" alt="Venezuela Flag"></p>
         <p  > last Modification: <span id="lastModified"></span></p>
     </footer>
 
+
+
+
+
+
+
+
     <script src="scripts/scripts.js"></script>
     <script src="scripts/getDates.js"></script>
     
     
+
+
+
+
 </body>
 </html>
