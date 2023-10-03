@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Home Page - Chamber of Commerce Lima">
+    <meta name="author" content="Cesar Grados">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta property="og:url"          content="https://ggrados.github.io/wdd230/chamber/">
+    <meta property="og:title"        content="LIMA CHAMBER OF COMMERCE">
+    <meta property="og:description"  content="Lima Chamber of Commerce Home Page for WDD230 Cesar Grados">
+    <meta property="og:type" content="article">
+    <meta property="og:image"        content="https://www.peru.travel/peru360/imagenes/preview/vista-panoramica-del-malecon-de-la-marina.jpg">
+
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Merriweather:ital,wght@0,400;1,900&family=Noticia+Text:ital@0;1&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <title>Home Page Lima Chamber Of Commerce</title>
+</head>
+<body>
+    
+    <header>
+        
+        <img src="images/logo.png" alt="logo">
+        <button id="menu"></button>
+        
+    </header>
+    <nav>
+        <ol>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="./week01/chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="#">Form</a></li>
+        </ol>
+    </nav>
+
+    <main id="discover-main">
+        <div id="container">
+            <div id="gallery">
+                <picture>
+                    <source media="(min-width: 960px)" srcset="images/malecon_large.webp" loading="lazy">
+                    <img src="images/malecon_small.webp" alt="Malecon" loading="lazy">
+                    
+                </picture>
+                <picture>
+                    <source media="(min-width: 960px)" srcset="images/banks_large.webp" loading="lazy">
+                    <img src="images/banks_small.webp" alt="banks" loading="lazy">
+                    
+                </picture>
+            <picture>
+                    <source media="(min-width: 960px)" srcset="images/historicalcenter_large.webp" loading="lazy">
+                    <img src="images/historicalcenter_small.webp" alt="historical center" loading="lazy">
+            </picture>
+            <picture>
+                    <source media="(min-width: 960px)" srcset="images/MachuPicchu_large.webp" loading="lazy">
+                    <img src="images/MachuPicchu_small.webp" alt="Machu Picchu" loading="lazy">
+            </picture>
+            <picture>
+                    <source media="(min-width: 960px)" srcset="images/money_large.webp" loading="lazy">
+                    <img src="images/money_small.webp" alt="Money">
+            </picture>
+            <picture>
+                <source media="(min-width: 960px)" srcset="images/SanIsidro_large.webp" loading="lazy">
+                    <img src="images/SanIsidro_small.webp" alt="San Isidro" loading="lazy">
+            </picture>
+            </div>
+
+
+
+            <aside id="aside-discover">
+            <section id="demografics"> 
+                <h2>Demografics</h2>
+                <p>Lima: 9 674 755 habitants</p>
+                <p>77,8 % works in Services and Commerce activities</p>
+             </section>
+             <section id="economy">
+                <p>Peru is the 53rd largest economy by GDP volume. Its public debt in 2022 was 76,759 million euros80,895 million dollars, with a debt of 33.37% of GDP. Its debt per capita is €2,277 euros per inhabitant, $2,399 dollars per inhabitant.</p>
+            </section>
+             <section id="map">
+                <h2>Lima business center</h2>
+                    <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1905513097313!2d-77.02193192493809!3d-12.099103888141812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c871ab7b9075%3A0x54eb9bf1b4724ca9!2sCentro%20Empresarial%20San%20Isidro!5e0!3m2!1sen!2spe!4v1696151595245!5m2!1sen!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+        
+    <footer>
+        
+            <p>&copy;<span id="year"></span>&bull; Cesar Grados - Venezuela</p>
+            <p  > last Modification: <span id="lastModified"></span></p>
+        
+    </footer>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
