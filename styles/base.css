@@ -57,7 +57,7 @@ header button:hover {
 }
 
 
-nav {
+nav ol{
     display: flex;
     flex-direction: column;
     text-align: center;    
@@ -86,6 +86,9 @@ nav li:hover {
 
 
 /* when the button is clicked - the open class is toggle (added/removed) and accounted for here */
+
+
+.open {display: block;}
 .open li {
 	display: block;
 	width: 100%;

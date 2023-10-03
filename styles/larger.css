@@ -2,7 +2,12 @@
     body {
         font-size: 1.5rem;
     }
-  nav {
+    .open {
+      display: block;
+    }
+
+    nav ol{
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
