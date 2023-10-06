@@ -38,7 +38,7 @@ form input {
 }
 
 form label.top {
-	-webkit-appearance: none;
+	--webkit-appearance: none;
     display: var(--block);
     color: #000;
     font-size: 1rem;
@@ -77,7 +77,7 @@ textarea:focus {
 
 
 #passwordMessage {
-	visibility: none;
+	
 	margin: 10px;
 	padding: 0.5rem;
 	color: red;
