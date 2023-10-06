@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- This start file was build by Paul Cheney  -->
+    <title>HTML5 Start Site by Paul Cheney</title>
+    <meta name="author" content="John Doe">
+    <meta name="description" content="Fill Me In">
+
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/base.css" rel="stylesheet">
+    <link href="styles/larger.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Course Proposal</h1>
+        <h2>Designing Web Forms</h2>
+    </header>
+
+    <nav class="clearfix">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li class="active"><a href="#">Propose</a></li>
+            <li><a href="#">Winners</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Course Proposal Application</h1>
+        <form method="get" action="thanks.html">
+            <fieldset>
+                <legend>Applicant Information</legend>
+                <label for="" class="top">First Name*<input type="text" name="fname" required ></label>
+                <label for="" class="top">Last Name*<input type="text" name="lname" required ></label>
+                <label for="" class="top">Phone<input type="tel" name="phone" placeholder="1235551234"></label>
+                <label for="" class="top">Email*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                <label for="" class="top">Website<input type="url" name="url" placeholder="htpp://" required></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Course Information</legend>
+                <div>Audicene</div>
+                <label for="" class="sbs"><input type="radio" name="audience" value="beginner">Beginner</label>
+                <label for="" class="sbs"><input type="radio" name="audience" value="intermediate">intermediater</label>
+                <label for="" class="sbs"><input type="radio" name="audience" value="Advanced">Advanced</label>
+
+
+
+            <div>Software Needed</div>
+            <label for="" class="sbs"><input type="checkbox" name="editing">Photo Editing</label>
+            <label for="" class="sbs"><input type="checkbox" name="code">Coding</label>
+            <label for="" class="sbs"><input type="checkbox" name="process">Preprocessor</label>
+            <label for="" class="sbs"><input type="checkbox" name="clent">FTP Client</label>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Funding</legend>
+                <label for="" class="top">Anticipatated completion date <input type="date" name="completedDate" id=""></label>
+                <label for="" class="top">Cousr Subject
+                    <select name="subject" id="">
+                        <option value="">Please Select &#9662;</option>
+                        <option value="software">Softare Development</option>
+                        <option value="Creative">Creative Profesional</option>
+
+                    </select>
+                </label>
+                <label for="" class="top">How Many Authors<input type="number" name="number" id=""></label>
+
+
+            </fieldset>
+
+            <input type="submit" value="Propose My Course" id="" class="submitBtn">
+        </form>
+    </main>
+
+
+    <footer>
+        &copy; &bull; Paul Cheney &bull; 123-555-6789
+    </footer>
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>

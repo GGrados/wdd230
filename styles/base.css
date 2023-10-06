@@ -4,8 +4,6 @@
     box-sizing: border-box;    
 }
 
-
-
 body {
     font-family: 'Dosis', sans-serif;
 }
@@ -56,20 +54,19 @@ header button:hover {
 	content: "☰";
 }
 
+nav {display: none}
 
 nav ol{
-    display: flex;
     flex-direction: column;
     text-align: center;    
     background-color: #333333;
-    
 }
 
 
 nav li { 
     list-style: none;
     padding: 0.2rem;
-    display: none;
+    
 }
 
 nav  li a {    
@@ -89,10 +86,7 @@ nav li:hover {
 
 
 .open {display: block;}
-.open li {
-	display: block;
-	width: 100%;
-}
+
 
 #menu.open {
     width: 3rem;

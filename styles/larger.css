@@ -2,15 +2,17 @@
     body {
         font-size: 1.5rem;
     }
-    .open {
+
+
+    nav {
       display: block;
     }
 
-    nav ol{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
+    nav ol {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
 
   header #menu {
     display: none;
