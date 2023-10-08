@@ -42,54 +42,43 @@
             <li><a href="#">Contact Us</a></li>
         </ol>
     </nav>
-    <main>
+    <main id="join-main">
 
-        <div id="hero-img-container">
+        <form method="get" action="thankyou.html">
+            <fieldset>
+                <legend>Applicant Information</legend>
+                <label class="top">First Name*<input type="text" name="fname" required id="fname"></label>
+                <label class="top">Last Name*<input type="text" name="lname" required id="lname"></label>
+                <label class="top">Title/Position<input type="text" name="title-position" id="title-position" pattern="^[a-zA-Z\- ]{7,}$"></label>
+                <label class="top">Email*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                <label class="top">Phone Number*<input type="tel" name="telephone" required id="phone"></label>
+                <label class="top">business/organization's name<input type="text" name="business-organization" required id="business-organization"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Membership Level</legend>
+                
+                <label class="sbs"><input type="radio" name="membership" value="NP">NP Membership is for non profit organizations and there is no fee.</label>
+                <label class="sbs"><input type="radio" name="membership" value="Bronze">Bronze</label>
+                <label class="sbs"><input type="radio" name="membership" value="Silver">Silver</label>
+                <label class="sbs"><input type="radio" name="membership" value="Gold">Gold</label>
+
+            </fieldset>
+            <fieldset>
+                <legend>business/organization's description</legend>
+                <label class="top">Description<input type="text"  name="description" id="description"></label>
+  
+            </fieldset>
+
+
+                <label><input type="hidden" name="timestamp" id="timestamp"></label>
+    
+    
+            <div class="button"><input type="submit" value="Join The Chamber"  class="joinBtn"></div>
             
-            <img src="images/lima.webp" alt="lima Malecon">
-            <h1 id="title">Lima Chamber Of Commerce</h1>
-            <button id="join-button">JOIN THE CHAMBER</button>
-        </div>
-
-        <section id="join">
-            <div class="section-header">
-                <h2>Join</h2>
-            <i class="bi bi-person-fill-add icon"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet provident minus quisquam sequi laborum magnam inventore recusandae aliquid? Vel neque explicabo nesciunt porro dolore ipsam voluptate accusamus quod maxime sint.</p>
-
-       </section>
-        <section id="weather">
-            <div class="section-header">
-                <h2>weather</h2>
-                <i class="bi bi-brightness-high-fill icon"></i>
-            </div>
-            
-        </section>
-        <section id="recent-news">
-            <div class="section-header"><h2>news</h2>
-            <i class="bi bi-newspaper icon"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa unde itaque necessitatibus cumque expedita similique assumenda omnis nemo fuga molestias ea, commodi laboriosam, ex praesentium. Earum reiciendis eaque accusamus soluta.</p>
-        </section>
-
-
-        <section id="events">
-            <div class="section-header"><h2>Events</h2>
-                <i class="bi bi-calendar3 icon"></i>
-            </div>
-            
-        </section>
-
-        <aside>
-            <div class="section-header"><h2>spotlights</h2>
-                <i class="bi bi-exclamation-triangle-fill icon"></i>
-            </div>
-            
-            <section class="spotlight" id="spotlight1"></section>
-            <section class="spotlight" id="spotlight2"></section>
-            <section class="spotlight" id="spotlight3"></section>
-        </aside>
+        </form>
+        
+   
     </main>
     <div id="last-visit"></div>
     <footer>
