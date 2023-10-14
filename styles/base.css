@@ -123,7 +123,8 @@ li {
 
 .card {
     border: 2px dashed black;
-    padding-bottom: 0.3rem
+    padding-bottom: 0.3rem;
+    
 }
 
 
@@ -199,7 +200,49 @@ iframe{
     position: absolute;
     bottom: 50px;
     left: 175px;
-    
-    
-    
 }
+
+
+/*Weather Data*/
+.information {
+    text-align: center;
+}
+
+#weather-container{ 
+text-align: center;}
+
+#weather-container #current-temp {
+    font-weight: bold;
+}
+
+#weather-container #weather-icon {
+    width: 20%;
+    background-color: #BC8810;
+    border-radius: 35px;
+    margin-top: 1rem;
+}
+
+#weather-container figcaption {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

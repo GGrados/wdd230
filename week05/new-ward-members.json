@@ -1,0 +1,29 @@
+{
+    "familyName": "Grados",
+    "move": "03-05-2023",
+    "size": 4,
+    "bischopric-visit": true,
+    "familyMembers": [
+      {
+        "name": "Gustavo Grados",
+        "gender": "Male",
+        "birthdate": "12-28-1965"
+      },
+      {
+        "name": "Myriam Hurtado",
+        "gender": "Female",
+        "birthdate": "01-15-1970"
+      },
+      {
+        "name": "Jennifer Grados",
+        "gender": "Female",
+        "birthdate": "11-26-1996"
+      },
+      {
+        "name": "Cesar Grados",
+        "gender": "Male",
+        "birthdate": "10-22-1999"
+      }
+    ]
+  }
+  
