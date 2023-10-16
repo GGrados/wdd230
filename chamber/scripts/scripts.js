@@ -59,5 +59,35 @@ function setTimestamp() {
   timestampElement.value = formattedTimestamp;
 }
 
-// Call the setTimestamp function to set the initial timestamp
 setTimestamp();
+
+// Members Dinamically
+
+const mainDirectory = document.querySelector("#main-directory");
+const membersUrl = "https://ggrados.github.io/wdd230/chamber/data/members.json";
+
+async function getMembers() {
+  try {
+    const response = await fetch(membersUrl);
+    if (response.ok) {
+      const data = await response.json();
+      displayMembers(data);
+    } else {
+      throw Error(await response.text());
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+function displayMembers(membersData) {
+  membersData.companies.forEach((company) => {
+    const divContainer = document.createElement("div");
+    const h2 = document.createElement("h2");
+    const address = document.createElement("p");
+    const phoneNumber = document.createElement("p");
+    const website = document.createElement("p");
+    const memberShipLevel = document.createElement("p");
+    const img = document.createElement("img");
+  });
+}
