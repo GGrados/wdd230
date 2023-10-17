@@ -205,12 +205,6 @@ figcaption {
     color: #fff;
 }
 
-
-
-
-
-
-
 #container {
     display: flex;
     
@@ -342,3 +336,59 @@ form label.top input:required:valid {
     color: #fff;
     padding: 0.5rem 0.2rem;
 }
+
+
+
+/*Companies*/
+
+
+#main-directory.column {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+#main-directory.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 0.5rem;
+
+
+}
+
+#main-directory .container {
+    background-color: #5C5C5C;
+    width: 300px;
+    border: 3px solid #000;
+    text-align: center;
+    line-height: 1.5rem;
+    color: #fff;
+}
+
+#main-directory .container img {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#main-directory .container .memberLink {
+    color: #fff;
+}
+
+label {
+    display: block;
+    width: fit-content;
+    margin: 1rem auto;
+}
+
+
+
+
+
+
+
+
