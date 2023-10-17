@@ -341,30 +341,41 @@ form label.top input:required:valid {
 
 /*Companies*/
 
-
-#main-directory.column {
+#main-directory {
+    display: flex;
+    flex-direction: column;
+}
+#card-container.column{
     max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #fff;
+    
+}
+#main-directory h1 {
+    font-family: 'Graduate', serif;
+    text-align: center;
 }
 
-#main-directory.grid {
+#card-container.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 0.5rem;
+    gap: 0.4rem;
 
 
 }
 
-#main-directory .container {
+#card-container .container {
     background-color: #5C5C5C;
     width: 300px;
     border: 3px solid #000;
     text-align: center;
     line-height: 1.5rem;
+    padding: 1rem;
+    font-family: 'Noticia Text', serif;
     color: #fff;
+    margin-top: 1rem;
+    
 }
 
 #main-directory .container img {
@@ -377,6 +388,7 @@ form label.top input:required:valid {
 
 #main-directory .container .memberLink {
     color: #fff;
+    font-family: 'Noticia Text', serif;
 }
 
 label {

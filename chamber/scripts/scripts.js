@@ -56,7 +56,7 @@ setTimestamp();
 
 // Members Dinamically
 
-const mainDirectory = document.querySelector("#main-directory");
+const cardContainer = document.querySelector("#card-container");
 const membersUrl = "https://ggrados.github.io/wdd230/chamber/data/members.json";
 
 async function getMembers() {
@@ -76,8 +76,8 @@ async function getMembers() {
 
 function displayMembers(membersData) {
   membersData.companies.forEach((company) => {
-    const divContainer = document.createElement("div");
-    divContainer.classList.add("container");
+    const article = document.createElement("article");
+    article.classList.add("container");
 
     const h2 = document.createElement("h2");
     h2.textContent = company.name;
@@ -99,14 +99,14 @@ function displayMembers(membersData) {
     const img = document.createElement("img");
     img.setAttribute("src", company.image);
 
-    divContainer.appendChild(img);
-    divContainer.appendChild(h2);
-    divContainer.appendChild(address);
-    divContainer.appendChild(phoneNumber);
-    divContainer.appendChild(website);
-    divContainer.appendChild(memberShipLevel);
+    article.appendChild(img);
+    article.appendChild(h2);
+    article.appendChild(address);
+    article.appendChild(phoneNumber);
+    article.appendChild(website);
+    article.appendChild(memberShipLevel);
 
-    mainDirectory.appendChild(divContainer);
+    cardContainer.appendChild(article);
   });
 }
 
@@ -116,7 +116,7 @@ getMembers();
 
 const changeView = () => {
   const selector = document.querySelector("#view");
-  const main = document.querySelector("#main-directory");
+  const main = document.querySelector("#card-container");
   const selectedValue = selector.value;
   /*fix this */
   if (selectedValue === "column") {
