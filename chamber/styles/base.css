@@ -115,7 +115,7 @@ section p {
     cursor: pointer;
 }
 
-#title {
+h1 {
     position: absolute;
     top: 10%;
     left: 0%;
