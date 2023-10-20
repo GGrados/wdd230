@@ -177,6 +177,12 @@ i {
 
 /*discover page*/
 
+#gallery-title {
+    display: block;
+    position: relative;
+    margin-bottom: 1rem;
+    text-align: center;
+}
 picture img {
     animation: fade 5s;
 
