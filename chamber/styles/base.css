@@ -179,6 +179,7 @@ i {
 
 picture img {
     animation: fade 5s;
+
 }
 
 @keyframes fade {
@@ -192,6 +193,7 @@ picture img {
 
 }
 
+
 #discover-main {
     display: grid;
     grid-template-columns: 1fr;
@@ -199,42 +201,33 @@ picture img {
     
 }
 
+#container {
+    background-color: #5C5C5C;
+    padding: 1rem;
+    text-align: center;
+}
 
 figcaption {
     text-align: center;
     color: #fff;
 }
 
-#container {
-    display: flex;
-    
+#gallery img {
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
 }
+
+#gallery img:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); 
+    filter: brightness(1.2);
+}
+
 iframe {
     width: 100%;
 }
 
-#aside-discover section {
-    padding: 0.8rem;
-}
 
 
-#gallery {
-    background-color: #5C5C5C;
-    order: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 0.8rem;
-  
-}
-
-
-#demografics {    
-    order: 1;      
-    justify-content: center;
-    text-align: left;
-    align-items: self-end;
-}
 
 
 
