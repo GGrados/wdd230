@@ -38,7 +38,7 @@ if (localStorage.getItem("lastVisitDate")) {
     }
   } else {
     // If this is the first visit, display a welcome messages
-    document.getElementById("last-visit").textContent =
+    document.getElementById("").textContent =
       "Welcome! Let us know if you have any questions.";
   }
 
@@ -131,7 +131,7 @@ if (localStorage.getItem("lastVisitDate")) {
     }
   };
 
-  //document.querySelector("#view").addEventListener("change", changeView);
+  document.querySelector("#view").addEventListener("change", changeView);
 
   /*Display temperature */
 

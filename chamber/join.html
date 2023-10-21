@@ -2,19 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Home Page - Chamber of Commerce Lima">
+    <meta name="description" content="Join Page - Chamber of Commerce Lima">
     <meta name="author" content="Cesar Grados">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta property="og:url"          content="https://ggrados.github.io/wdd230/chamber/">
     <meta property="og:title"        content="LIMA CHAMBER OF COMMERCE">
     <meta property="og:description"  content="Lima Chamber of Commerce Join Page for WDD230 Cesar Grados">
-    <meta property="og:type" content="article">
+    <meta property="og:type" content="website">
     <meta property="og:image"        content="https://www.peru.travel/peru360/imagenes/preview/vista-panoramica-del-malecon-de-la-marina.jpg">
-
-
-
-
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Merriweather:ital,wght@0,400;1,900&family=Noticia+Text:ital@0;1&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
@@ -23,15 +18,12 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
     
-    <title>Home Page Lima Chamber Of Commerce</title>
+    <title>Join - Lima Chamber of Commerce</title>
 </head>
 <body>
-    
     <header>
-        
         <img src="images/logo.png" alt="logo">
         <button id="menu"></button>
-        
     </header>
     <nav>
         <ol>
@@ -47,13 +39,13 @@
         <form method="get" action="thankyou.html">
             <fieldset>
                 <legend>Applicant Information</legend>
-                <label class="top">First Name*<input type="text" name="fname" required id="fname"></label>
-                <label class="top">Last Name*<input type="text" name="lname" required id="lname"></label>
+                <label class="top">First Name*<input type="text" name="fname" id="fname"></label required >
+                <label class="top">Last Name*<input type="text" name="lname"  id="lname"></label required>
                 <label class="top">Title/Position<input type="text" name="title-position" id="title-position" pattern="^[a-zA-Z\- ]{7,}$"></label>
                 <label class="top">Email*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
-                <label class="top">Phone Number*<input type="tel" name="telephone" required id="phone"></label>
-                <label class="top">business/organization's name<input type="text" name="business-organization" required id="business-organization"></label>
-            </fieldset>
+                <label class="top">Phone Number*<input type="tel" name="telephone"  id="phone" required></label>
+                <label class="top">business/organization's name<input type="text" name="business-organization"  id="business-organization" required></label>
+            </fieldset> 
 
             <fieldset>
                 <legend>Membership Level</legend>
@@ -64,9 +56,9 @@
                 <label class="sbs"><input type="radio" name="membership" value="Gold">Gold</label>
 
             </fieldset>
-            <fieldset>
+            <fieldset id="description">
                 <legend>business/organization's description</legend>
-                <label class="top">Description<input type="text"  name="description" id="description"></label>
+                <label class="top">Description <textarea id="w3review" name="w3review" rows="4" cols="50">Write a description of your company here</textarea></label>
   
             </fieldset>
 
@@ -78,7 +70,6 @@
             
         </form>
         
-   
     </main>
     <div id="last-visit"></div>
     <footer>

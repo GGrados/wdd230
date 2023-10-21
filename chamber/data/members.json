@@ -5,7 +5,7 @@
             "address": "Jr. Centenario 156, La Molina 15026",
             "phoneNumber": "(01)3119898",
             "websiteURL":"https://www.viabcp.com/canales/banca-por-telefono",
-            "image": "images/bcpImg.webp",
+            "image": "images/bcp.webp",
             "membershipLevel": "Bronze"
         },
         {
@@ -13,7 +13,7 @@
             "address": "Av. Javier Prado Lts. 10B, Magdalena del Mar 15076",
             "phoneNumber": "(01) 4191919",
             "websiteURL":"https://www.bembos.com.pe/",
-            "image": "images/bembosImg.webp",
+            "image": "images/bembos.webp",
             "membershipLevel": "Gold"
         },
         {
@@ -21,7 +21,7 @@
             "address": "Av. José Pardo 130, Miraflores 15074",
             "phoneNumber": "(01) 5123333",
             "websiteURL":"https://www.falabella.com.pe/falabella-pe",
-            "image": "images/falabellaImg.webp",
+            "image": "images/falabella.webp",
             "membershipLevel": "NP"
         },
         {
@@ -29,7 +29,7 @@
             "address": "Av. Gral. Salaverry 2370, Jesús María 15076",
             "phoneNumber": "(01) 6014000",
             "websiteURL":"https://www.realplaza.com/",
-            "image": "images/realPlazaImg.webp",
+            "image": "images/realplaza.webp",
             "membershipLevel": "Silver"
         },
         {
@@ -37,7 +37,7 @@
             "address": "Clemente X 45, Lima 15076",
             "phoneNumber": "(01) 3514400",
             "websiteURL":"https://www.tambo.pe/",
-            "image": "images/tamboImg.webp",
+            "image": "images/tambo.webp",
             "membershipLevel": "Bronze"
         },
         {
@@ -45,7 +45,7 @@
             "address": "Av. Sta. Cruz 771, Miraflores 15074",
             "phoneNumber": "(01) 6250000",
             "websiteURL":"https://www.wong.pe/",
-            "image": "images/wonImg.webp",
+            "image": "images/won.webp",
             "membershipLevel": "Silver"
         },
         {
@@ -53,7 +53,7 @@
             "address": "Av. Sta. Cruz 814, Lima 15073",
             "phoneNumber": "(01) 73202630",
             "websiteURL":"https://www.cineplanet.com.pe/",
-            "image": "images/cineplanetImg.webp",
+            "image": "images/cine.webp",
             "membershipLevel": "NP"
         }
     ]
