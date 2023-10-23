@@ -131,6 +131,16 @@ h1 {
 
 #weather {
     grid-column: 3/5;
+    text-align: center;
+}
+
+#weather #three-days-forecast {
+    display: flex;
+    justify-content: space-around;
+}
+
+#weather #three-days-forecast p::after {
+    content: "°F"
 }
 
 #recent-news {

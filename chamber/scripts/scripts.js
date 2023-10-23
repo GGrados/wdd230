@@ -19,13 +19,11 @@ const msToDays = 84600000; // using to convert to ms to days
 
 if (localStorage.getItem("lastVisitDate")) {
   //check if a last visit date exist
-
   const lastVisitDate = new Date(
     localStorage.getItem("lastVisitDate")
   ).getTime(); // getting the last visit date in miliseconds
   const today = Date.now(); // Todays's date in ms
   let daysDifference = (today - lastVisitDate) / msToDays; // Calculate the number of days since last visit
-
   // Confirm how many days has passed
   let message = "";
   if (daysDifference < 1) {
@@ -41,126 +39,146 @@ if (localStorage.getItem("lastVisitDate")) {
     document.getElementById("").textContent =
       "Welcome! Let us know if you have any questions.";
   }
-
   const divLastVisit = document.querySelector("#last-visit");
   divLastVisit.textContent = message;
   localStorage.setItem("lastVisitDate", todaysDate);
+}
 
-  /*Form*/
-  /*Time Stamp */
+/*Form*/
+/*Time Stamp */
 
-  function setTimestamp() {
-    const timestampElement = document.getElementById("timestamp");
-    const currentDate = new Date();
-    const formattedTimestamp = currentDate.toLocaleString();
-  }
-  setTimestamp();
+function setTimestamp() {
+  const timestampElement = document.getElementById("timestamp");
+  const currentDate = new Date();
+  const formattedTimestamp = currentDate.toLocaleString();
+}
+setTimestamp();
 
-  // Members Dinamically
+// Members Dinamically
 
-  const cardContainer = document.querySelector("#card-container");
-  const membersUrl =
-    "https://ggrados.github.io/wdd230/chamber/data/members.json";
+const cardContainer = document.querySelector("#card-container");
+const membersUrl = "https://ggrados.github.io/wdd230/chamber/data/members.json";
 
-  async function getMembers() {
-    try {
-      const response = await fetch(membersUrl);
-      if (response.ok) {
-        const data = await response.json();
-        console.log(data);
-        displayMembers(data);
-      } else {
-        throw Error(await response.text());
-      }
-    } catch (error) {
-      console.log(error);
+async function getMembers() {
+  try {
+    const response = await fetch(membersUrl);
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data);
+      displayMembers(data);
+    } else {
+      throw Error(await response.text());
     }
+  } catch (error) {
+    console.log(error);
   }
+}
 
-  function displayMembers(membersData) {
-    membersData.companies.forEach((company) => {
-      const article = document.createElement("article");
-      article.classList.add("container");
+function displayMembers(membersData) {
+  membersData.companies.forEach((company) => {
+    const article = document.createElement("article");
+    article.classList.add("container");
 
-      const h2 = document.createElement("h2");
-      h2.textContent = company.name;
+    const h2 = document.createElement("h2");
+    h2.textContent = company.name;
 
-      const address = document.createElement("p");
-      address.textContent = company.address;
+    const address = document.createElement("p");
+    address.textContent = company.address;
 
-      const phoneNumber = document.createElement("p");
-      phoneNumber.textContent = company.phoneNumber;
+    const phoneNumber = document.createElement("p");
+    phoneNumber.textContent = company.phoneNumber;
 
-      const website = document.createElement("a");
-      website.setAttribute("href", company.websiteURL);
-      website.textContent = company.websiteURL;
-      website.classList.add("memberLink");
+    const website = document.createElement("a");
+    website.setAttribute("href", company.websiteURL);
+    website.textContent = company.websiteURL;
+    website.classList.add("memberLink");
 
-      const memberShipLevel = document.createElement("p");
-      memberShipLevel.textContent = `MemberShip Level: ${company.membershipLevel}`;
+    const memberShipLevel = document.createElement("p");
+    memberShipLevel.textContent = `MemberShip Level: ${company.membershipLevel}`;
 
-      const img = document.createElement("img");
-      img.setAttribute("src", company.image);
+    const img = document.createElement("img");
+    img.setAttribute("src", company.image);
 
-      article.appendChild(img);
-      article.appendChild(h2);
-      article.appendChild(address);
-      article.appendChild(phoneNumber);
-      article.appendChild(website);
-      article.appendChild(memberShipLevel);
+    article.appendChild(img);
+    article.appendChild(h2);
+    article.appendChild(address);
+    article.appendChild(phoneNumber);
+    article.appendChild(website);
+    article.appendChild(memberShipLevel);
 
-      cardContainer.appendChild(article);
-    });
-  }
+    cardContainer.appendChild(article);
+  });
+}
 
+if (cardContainer) {
   getMembers();
+}
 
-  /*SELECT THE VIEW*/
+/*SELECT THE VIEW*/
 
-  const changeView = () => {
-    const selector = document.querySelector("#view");
-    const main = document.querySelector("#card-container");
-    const selectedValue = selector.value;
-    /*fix this */
-    if (selectedValue === "column") {
-      main.classList.remove("grid");
-      main.classList.toggle("column");
-    } else if (selectedValue === "grid") {
-      main.classList.remove("column");
-      main.classList.toggle("grid");
-    }
-  };
+const changeView = () => {
+  const selector = document.querySelector("#view");
+  const main = document.querySelector("#card-container");
+  const selectedValue = selector.value;
+  /*fix this */
+  if (selectedValue === "column") {
+    main.classList.remove("grid");
+    main.classList.toggle("column");
+  } else if (selectedValue === "grid") {
+    main.classList.remove("column");
+    main.classList.toggle("grid");
+  }
+};
 
-  document.querySelector("#view").addEventListener("change", changeView);
+const changeViewVar = document.querySelector("#view");
+if (changeViewVar) {
+  changeViewVar.addEventListener("change", changeView);
+}
 
-  /*Display temperature */
+/*Display temperature */
 
-  const currentTemp = document.querySelector("#current-temp");
-  const weatherIcon = document.querySelector("#weather-icon");
-  const captionDesc = document.querySelector("figcaption");
+const currentTemp = document.querySelector("#current-temp");
+const weatherIcon = document.querySelector("#weather-icon");
+const captionDesc = document.querySelector("figcaption");
 
+const url =
+  "https://api.openweathermap.org/data/2.5/weather?lat=49.74&lon=6.63&appid=76cd0cc1ffbcb7fcbc8193cf2c4758e5";
+
+async function apiFetch() {
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log(data);
+  displayResults(data);
+}
+
+function displayResults(data) {
+  currentTemp.textContent = `${data.main.temp} °F`;
+  weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+  captionDesc.textContent = data.weather[0].description;
+}
+
+apiFetch();
+
+async function getThreDayForecast() {
   const url =
-    "https://api.openweathermap.org/data/2.5/weather?lat=49.74&lon=6.63&appid=76cd0cc1ffbcb7fcbc8193cf2c4758e5&units=imperial";
+    "https://api.openweathermap.org/data/2.5/forecast?lat=49.74&lon=6.63&appid=76cd0cc1ffbcb7fcbc8193cf2c4758e5&units=imperial";
+  const response = await fetch(url);
+  const forecastData = await response.json();
+  displayForecast(forecastData);
+}
 
-  async function apiFetch() {
-    try {
-      const response = await fetch(url);
-      if (response.ok) {
-        const data = await response.json();
-        displayResults(data);
-      } else {
-        throw Error(await response.text());
-      }
-    } catch (error) {
-      console.log(error);
+getThreDayForecast();
+
+function displayForecast(forecastData) {
+  const forecastDiv = document.querySelector("#three-days-forecast");
+  forecastData.list.forEach((threeHour, i) => {
+    if ([9, 18, 36].includes(i)) {
+      const dayContainer = document.createElement("div");
+      dayContainer.classList.add("day-container");
+      const p = document.createElement("p");
+      p.textContent = threeHour.main.temp;
+      dayContainer.appendChild(p);
+      forecastDiv.appendChild(dayContainer);
     }
-  }
-
-  apiFetch();
-
-  function displayResults(data) {
-    currentTemp.textContent = `${data.main.temp} °F`;
-    weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
-    captionDesc.textContent = data.weather[0].description;
-  }
+  });
 }
