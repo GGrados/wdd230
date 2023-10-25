@@ -18,14 +18,13 @@ button.addEventListener("click", () => {
 const msToDays = 84600000; // using to convert to ms to days
 
 if (localStorage.getItem("lastVisitDate")) {
-  //check if a last visit date exist
   const lastVisitDate = new Date(
     localStorage.getItem("lastVisitDate")
-  ).getTime(); // getting the last visit date in miliseconds
-  const today = Date.now(); // Todays's date in ms
-  let daysDifference = (today - lastVisitDate) / msToDays; // Calculate the number of days since last visit
-  // Confirm how many days has passed
+  ).getTime();
+  const today = Date.now();
+  let daysDifference = (today - lastVisitDate) / msToDays;
   let message = "";
+
   if (daysDifference < 1) {
     message = "Back so soon! Awesome!";
   } else if (daysDifference >= 1) {
@@ -34,16 +33,18 @@ if (localStorage.getItem("lastVisitDate")) {
     } else {
       message = `Your last visit was ${Math.floor(daysDifference)} days ago`;
     }
-  } else {
-    // If this is the first visit, display a welcome messages
-    document.getElementById("").textContent =
-      "Welcome! Let us know if you have any questions.";
   }
+
+  // Move this line outside of the if and else if blocks
   const divLastVisit = document.querySelector("#last-visit");
   divLastVisit.textContent = message;
-  localStorage.setItem("lastVisitDate", todaysDate);
-}
 
+  localStorage.setItem("lastVisitDate", todaysDate);
+} else {
+  // If this is the first visit, display a welcome message
+  document.getElementById("last-visit").textContent =
+    "Welcome! Let us know if you have any questions.";
+}
 /*Form*/
 /*Time Stamp */
 
@@ -120,7 +121,6 @@ const changeView = () => {
   const selector = document.querySelector("#view");
   const main = document.querySelector("#card-container");
   const selectedValue = selector.value;
-  /*fix this */
   if (selectedValue === "column") {
     main.classList.remove("grid");
     main.classList.toggle("column");
@@ -147,7 +147,7 @@ const url =
 async function apiFetch() {
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data);
+
   displayResults(data);
 }
 
@@ -180,5 +180,44 @@ function displayForecast(forecastData) {
       dayContainer.appendChild(p);
       forecastDiv.appendChild(dayContainer);
     }
+  });
+}
+
+/*ADVERTISEMENT*/
+
+const memberJson = "https://ggrados.github.io/wdd230/chamber/data/members.json";
+async function getSilverMembers(url) {
+  const data = await fetch(url);
+  const jsonData = await data.json();
+  const silverCompanies = jsonData.companies.filter(
+    (company) => company.membershipLevel === "Silver"
+  );
+
+  console.log(silverCompanies);
+
+  showSpotlights(silverCompanies);
+}
+
+getSilverMembers(memberJson);
+
+const spotlights = document.querySelector("#spotlights");
+
+function showSpotlights(silverCompanies) {
+  silverCompanies.forEach((element) => {
+    console.log(element);
+
+    const h3 = document.createElement("h3");
+    h3.textContent = element.name;
+
+    const img = document.createElement("img");
+    img.setAttribute("src", `./${element.image}`);
+    img.setAttribute("alt", element.name);
+
+    const p = document.createElement("p");
+    p.textContent = element.advertisement;
+
+    spotlights.appendChild(h3);
+    spotlights.appendChild(img);
+    spotlights.appendChild(p);
   });
 }

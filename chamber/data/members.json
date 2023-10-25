@@ -30,7 +30,8 @@
             "phoneNumber": "(01) 6014000",
             "websiteURL":"https://www.realplaza.com/",
             "image": "images/realplaza.webp",
-            "membershipLevel": "Silver"
+            "membershipLevel": "Silver",
+            "advertisement": "Step into a world of endless possibilities at Real Plaza, your ultimate destination for shopping, dining, and entertainment. With a diverse array of stores and exciting experiences, Real Plaza is the place where unforgettable memories are mad"
         },
         {
             "name": "Tambo",
@@ -38,7 +39,8 @@
             "phoneNumber": "(01) 3514400",
             "websiteURL":"https://www.tambo.pe/",
             "image": "images/tambo.webp",
-            "membershipLevel": "Silver"
+            "membershipLevel": "Silver",
+            "advertisement": "Discover the convenience you crave at Tambo! From snacks to daily essentials, we've got it all. Shop local and experience the ease of a neighborhood convenience store."
         },
         {
             "name": "Wong",
@@ -46,7 +48,8 @@
             "phoneNumber": "(01) 6250000",
             "websiteURL":"https://www.wong.pe/",
             "image": "images/won.webp",
-            "membershipLevel": "Silver"
+            "membershipLevel": "Silver",
+            "advertisement": "Shop with confidence at Wong, where freshness and quality meet convenience. Explore a world of delicious choices. from farm-fresh produce to pantry essentials, all under one roof. Join us at Wong and experience grocery shopping redefined!"
         },
         {
             "name": "Cinet Planet",
